@@ -1,0 +1,121 @@
+body {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+
+  background: #2C2B3D;
+  color: #FFFFFF;
+  min-height: 100vh;
+}
+
+.page {
+  margin: 0;
+  padding: 71px 99px 23px;
+}
+#logo{
+ scale: 0.4;
+ width: 168px;
+
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  height: 23px;
+}
+
+ul {
+  display: flex;
+  gap: 64px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+ul li a {
+  opacity: 1;
+}
+
+ul li a:hover {
+  font-weight: bold;
+  opacity: 0.5;
+}
+
+h1,
+ul {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+main {
+  padding-top: 90px;
+  display: flex;
+  align-items:start;
+  justify-content: center;
+  gap: 77px;
+}
+
+section{
+  display: block;
+}
+
+#note{
+  width: 400px;
+  height: 280px;
+}
+h1 {
+  margin: 0;
+  font-size: 36px;
+  line-height: 48px;
+
+  width: 610px;
+  height: 40px;
+  padding-bottom: 40px;
+}
+
+h1 span {
+  color: #00BFA6;
+}
+
+section p{
+  font-size: 14px;
+  line-height: 28px;
+  color: #C2C2C2;
+  text-align: center;
+}
+#cinza{
+  color: #C2C2C2;
+}
+p span{
+  color: #00BFA6;
+  font-weight: bold;
+}
+.line{
+  width: 568px;
+  height: 0;
+
+  margin: 0 auto 27px;
+
+  border: 1px solid #00BFA6;
+}
+
+footer {
+  margin-top: 110px;
+  margin-bottom: 0;
+  font-size: 14px;
+  line-height: 28px;
+  text-align: center;
+}
+footer a:hover{
+  opacity: 0.5;
+}
+#cadiado {
+    position: fixed;
+    bottom: 23px;
+    left: 23px;
+}

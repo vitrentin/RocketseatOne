@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+#app {
+  display: grid;
+  grid-template-areas:
+    "A B B"
+    "A B B"
+    "A C D";
+  /* grid-template:
+     "A B B" 80px
+     "A B B" 40px
+     "A C D" 50px / 80px 1fr 2fr; 
+     area    rows / column
+  */
+  /* grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100px 1fr 1fr; */
+  height: 100vh;
+  /*
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-columns: repeat(3, 1fr) 
+  3 colunas com 1 fração em cada, caso coloque um 
+  numero de espaços maior do que possui de filhos,
+  as repartições ficarão vazias, ao colocar mais
+  tags, elas ficarão nesses espaços vazios.
+  Caso defina 3 colunas e tenha mais do que 3 tags,
+  as demais ficaram em baixo formando uma nova linha */
+  /* gap: 20px; */
+  row-gap: 40px;
+  column-gap: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+#app > * {
+  border: 1px solid red;
+}
+/* span {
+  border: 1px solid blue;
+} */
+#app header {
+  grid-area: A;
+  /* 
+  grid-row: 1/4;
+  grid-column: 1/4; */
+}
+#app main {
+  grid-area: B;
+  /* 
+  grid-column: 2/4;
+  grid-row: 1/3;
+  grid-column: 1/3; */
+}
+/* #app footer {
+  grid-row: 3/4;
+  grid-column: 3/4;
+}
+*/
+/*
+  #app div:nth-child(1) {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  }
+  Agora o primeiro filho está pegando
+  as 2 colunas
+  #app div:nth-child(2) {
+  grid-column: 1/3;
+}
+#app div:nth-child(4) {
+  grid-column: 1/4;
+}
+  */
