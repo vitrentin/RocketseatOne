@@ -1,17 +1,26 @@
 // const http = require("http");
 import http from "node:http";
 
-// CommonJS => require
-// ESModules => import/export
-// Por padrão o node não entende ESModules
-// Colocar "type": "module" dentro de package.json
-
-// import fastify from "fastify"
-
-// Criar um usuário (name, email, senha)
+const users = [];
 
 const server = http.createServer((request, response) => {
-  return response.end("Hello World");
+  const { method, url } = request;
+  console.log(method, url);
+  if (method === "GET" && url === "/users") {
+    return response
+      .setHeader("Content-type", "application/json")
+      .end(JSON.stringify(users));
+  }
+  if (method === "POST" && url === "/users") {
+    users.push({
+      id: 1,
+      name: "John Doe",
+      email: "johndoe@example.com",
+    });
+
+    return response.writeHead(201).end();
+  }
+  return response.writeHead(404).end();
 });
 
 server.listen(3333);
